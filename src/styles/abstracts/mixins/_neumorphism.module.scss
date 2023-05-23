@@ -1,0 +1,16 @@
+@use 'sass:color';
+@use '@/styles/abstracts/variables.module' as *;
+
+$lightShadowColor: color.adjust($baseColor, $lightness: $intensityLight);
+$darkShadowColor: color.adjust($baseColor, $lightness: -$intensityLight);
+
+@mixin neumorphism_flatItem {
+  margin: $diffusionShadow;
+  box-shadow: $sizeShadow $sizeShadow $diffusionShadow $darkShadowColor,
+    (-$sizeShadow) (-$sizeShadow) $diffusionShadow $lightShadowColor;
+}
+@mixin neumorphism_pressedItem {
+  margin: $diffusionShadow;
+  box-shadow: inset $sizeShadow $sizeShadow $diffusionShadow $darkShadowColor,
+    inset (-$sizeShadow) (-$sizeShadow) $diffusionShadow $lightShadowColor;
+}

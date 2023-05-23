@@ -1,0 +1,31 @@
+@use '@/styles/abstracts/variables.module' as *;
+@use '@/styles/abstracts/mixins/neumorphism.module' as *;
+
+.Sample {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: $baseColor;
+
+  & > * {
+    @include neumorphism_pressedItem;
+    color: white;
+  }
+
+  .square {
+    width: 20ch;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .circle {
+    width: 20ch;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+}
