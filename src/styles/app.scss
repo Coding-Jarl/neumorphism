@@ -1,5 +1,4 @@
 @use '@/styles/abstracts/variables.module' as *;
-@use '@/styles/abstracts/mixins/neumorphism.module' as *;
 
 @use 'core/reset';
-@use 'core/typo';
+@use 'core/base';

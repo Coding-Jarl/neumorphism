@@ -4,12 +4,13 @@
 $lightShadowColor: color.adjust($baseColor, $lightness: $intensityLight);
 $darkShadowColor: color.adjust($baseColor, $lightness: -$intensityLight);
 
-@mixin neumorphism_flatItem {
+@mixin base {
   margin: $diffusionShadow;
+  transition: 0.2s box-shadow ease-in-out;
   box-shadow: $sizeShadow $sizeShadow $diffusionShadow $darkShadowColor,
     (-$sizeShadow) (-$sizeShadow) $diffusionShadow $lightShadowColor;
 }
-@mixin neumorphism_pressedItem {
+@mixin sunk {
   margin: $diffusionShadow;
   box-shadow: inset $sizeShadow $sizeShadow $diffusionShadow $darkShadowColor,
     inset (-$sizeShadow) (-$sizeShadow) $diffusionShadow $lightShadowColor;

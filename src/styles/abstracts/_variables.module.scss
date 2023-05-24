@@ -1,5 +1,12 @@
+/* Global settings */
+
 /* Neumorphism settings */
 $baseColor: #3d3846;
 $sizeShadow: 5px; //5-50px
 $diffusionShadow: 40px; //0-100px
 $intensityLight: 25%; //0-100%
+
+/* Glower settings */
+$glowColor: #ff33ff66;
+$glowDim: 15%;
+$glowTimer: 0.3s;

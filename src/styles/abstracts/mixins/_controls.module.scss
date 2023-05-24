@@ -1,0 +1,19 @@
+@use 'sass:color';
+@use '@/styles/abstracts/variables.module' as *;
+
+$offGlowColor: color.adjust($glowColor, $lightness: -$glowDim);
+
+@mixin base {
+  border: 2px solid $offGlowColor;
+}
+
+@mixin pressed {
+  animation: animGlow $glowTimer linear alternate-reverse infinite;
+}
+
+@keyframes animGlow {
+  to {
+    color: $glowColor;
+    border: 2px solid $glowColor;
+  }
+}
