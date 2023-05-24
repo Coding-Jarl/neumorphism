@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import styles from './style.module.scss'
+import styles from '@/styles/components/Sample.module.scss'
 
 export default function Sample() {
   const [isChecked, setIsChecked] = useState(false)
