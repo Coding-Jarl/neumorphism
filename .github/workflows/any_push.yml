@@ -9,5 +9,11 @@ jobs:
         uses: actions/checkout@v3
       - name: Install Node
         uses: actions/setup-node@v3
-      - name: Execute Lint-Staged
-        run: npx lint-staged
+      - name: Install dependencies
+        uses: npm i
+      - name: Execute TSC
+        run: npx tsc --noEmit
+      - name: Execute ESLint
+        run: npx eslint --fix .
+      - name: Execute Prettier
+        run: npx prettier --write .
