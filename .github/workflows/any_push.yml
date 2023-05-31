@@ -4,8 +4,6 @@ on: [push]
 jobs:
   Lint:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -13,9 +11,5 @@ jobs:
         uses: actions/setup-node@v3
       - name: Install dependencies
         run: npm i
-      - name: Execute TSC
-        run: npx tsc --noEmit
-      - name: Execute ESLint
-        run: npx eslint --fix .
-      - name: Execute Prettier
-        run: npx prettier --write .
+      - name: Lint everything
+        run: npm run lint
