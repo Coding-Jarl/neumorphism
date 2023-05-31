@@ -10,7 +10,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v3
       - name: Install dependencies
-        uses: npm i
+        run: npm i
       - name: Execute TSC
         run: npx tsc --noEmit
       - name: Execute ESLint
