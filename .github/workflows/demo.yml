@@ -11,5 +11,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: List folder content
-        run: ll ${{ github.workspace }}
+        run: ls -lah ${{ github.workspace }}
       - run: echo "Status ${{ job.status }}"
