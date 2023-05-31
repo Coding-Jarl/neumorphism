@@ -1,0 +1,15 @@
+name: Hello World
+run-name: ${{ github.actor }} is doing his first Action !
+on: [push]
+jobs:
+  Actions-101:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "I iz there! \o/"
+      - run: echo "Event ${{ github.event_name }} triggered on branch ${{ github.repository }}/${{ github.ref }}"
+      - run: echo "Runner ${{ runner.os }} will now checkout said branch"
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: List folder content
+        run: ll ${{ github.workspace }}
+      - run: echo "Status ${{ job.status }}"
