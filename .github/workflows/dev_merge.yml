@@ -32,8 +32,6 @@ jobs:
       - name: Install dependencies
         run: npm i
       - name: Release
-        run:
-      - name: Commit & Push changes
         run: |
           git config --global user.email "github-actions@github.com"
           git config --global user.name "GitHub Actions"
