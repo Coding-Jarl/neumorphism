@@ -1,12 +1,13 @@
 {
   "name": "neumorphism",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix && prettier --write ."
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix && prettier --write .",
+    "release": "standard-version --no-verify"
   },
   "dependencies": {
     "eslint": "8.40.0",
