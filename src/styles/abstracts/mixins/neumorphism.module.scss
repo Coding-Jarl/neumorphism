@@ -1,0 +1,17 @@
+@use 'sass:color';
+@use '@/styles/abstracts/variables.module' as *;
+
+$lightShadowColor: color.adjust($baseColor, $lightness: $intensityLight);
+$darkShadowColor: color.adjust($baseColor, $lightness: -$intensityLight);
+
+@mixin base {
+  margin: $diffusionShadow;
+  transition: 0.2s box-shadow ease-in-out;
+  box-shadow: $sizeShadow $sizeShadow $diffusionShadow $darkShadowColor,
+    (-$sizeShadow) (-$sizeShadow) $diffusionShadow $lightShadowColor;
+}
+@mixin sunk {
+  margin: $diffusionShadow;
+  box-shadow: inset $sizeShadow $sizeShadow $diffusionShadow $darkShadowColor,
+    inset (-$sizeShadow) (-$sizeShadow) $diffusionShadow $lightShadowColor;
+}

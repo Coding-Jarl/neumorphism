@@ -1,0 +1,47 @@
+@use '@/styles/abstracts/mixins/neumorphism.module' as neu;
+@use '@/styles/abstracts/mixins/controls.module' as in;
+
+.Sample {
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .block {
+    @include neu.base;
+    color: white;
+    width: 15ch;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  label input {
+    display: none;
+  }
+  .button {
+    @include in.base;
+  }
+
+  .circle {
+    border-radius: 50%;
+  }
+
+  .withColorBG {
+    background-color: yellowgreen;
+  }
+
+  .withImgBG {
+    background-image: url(https://www.jeuxactu.com/datas/jeux/a/s/assassin-s-creed-valhalla/vn/assassin-s-creed-valhalla-5fa91f43cd31a.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .pressed {
+    @include neu.sunk;
+    @include in.pressed;
+  }
+}
