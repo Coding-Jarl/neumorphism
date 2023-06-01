@@ -1,3 +1,3 @@
-let a = 0;
-
-a = a+1;
+function add(a,b) {
+  return a+b
+}
