@@ -35,13 +35,9 @@ jobs:
         run: npm run release
       - name: Commit & Push changes
         run: |
-          if [[ `git status --porcelain` ]]; then
-            git config --global user.email "github-actions@github.com"
-            git config --global user.name "GitHub Actions"
-            git add .
-            git commit -m "Release a new version" -a
-            git push
-            echo "Success!"
-          else
-            echo "Something went wrong during this release"
-          fi
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add .
+          git commit -m "Release a new version" -a
+          git push
+          echo "Success!"
