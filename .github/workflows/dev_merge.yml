@@ -16,7 +16,7 @@ jobs:
         run: npm i
       - name: WiP tests
         run: echo "We should launch tests here"
-  Release:
+  TagAsStable:
     runs-on: ubuntu-latest
     needs: Test
     permissions:
@@ -30,7 +30,7 @@ jobs:
         uses: actions/setup-node@v3
       - name: Install dependencies
         run: npm i
-      - name: Release
+      - name: TagAsStable
         run: |
           git config --global user.email "github-actions@github.com"
           git config --global user.name "GitHub Actions"
