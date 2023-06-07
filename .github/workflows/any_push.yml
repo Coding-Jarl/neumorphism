@@ -1,6 +1,11 @@
 name: Lint
 run-name: Lint new code
-on: [push]
+on:
+  push:
+    branches:
+      - '**'
+      - '!master'
+      - '!dev'
 jobs:
   Lint:
     runs-on: ubuntu-latest
