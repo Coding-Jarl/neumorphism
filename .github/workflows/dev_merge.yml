@@ -2,8 +2,7 @@ name: Release
 run-name: Release
 on:
   pull_request:
-    branches:
-      - dev
+    branch: dev
     types: [closed]
 jobs:
   Test:
